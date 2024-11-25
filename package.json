@@ -6,11 +6,13 @@
   "license": "MIT",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "handlebars views/partials/photoCard.handlebars -f static/photoCardTemplate.js",
+    "prestart": "npm run build"
   },
   "dependencies": {
     "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
     "handlebars": "^4.7.8"
   }
 }
